@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    tools:context="com.locservice.ui.LanguageListActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_order_history_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/header_top_padding">
+
+            <LinearLayout
+                android:id="@+id/layoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_arrow_back_white" />
+            </LinearLayout>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/str_language"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <ImageView
+                android:id="@+id/img_dummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_list_margin_side"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@null" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewLanguages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutHeader">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

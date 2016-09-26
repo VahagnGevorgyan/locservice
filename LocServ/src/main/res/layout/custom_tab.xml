@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:locservice="http://schemas.android.com/tools"
+    android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/tab_icon"
+        android:visibility="gone"
+        android:contentDescription="@null"/>
+
+    <com.locservice.ui.controls.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/tab_name"
+        locservice:font="fonts/RobotoRegular.ttf"/>
+</LinearLayout>

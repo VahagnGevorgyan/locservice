@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/tab_background"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:gravity="center">
+    
+    
+    <ImageView 
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/drawable_time_picker"
+        android:layout_gravity="center_vertical"/>
+    
+    <com.locservice.ui.controls.CustomTextView
+  		    	  android:id="@+id/textViewFirstNumber"
+  		       	  android:layout_width="wrap_content"
+  				  android:layout_height="wrap_content"
+  				  android:textSize="20sp"
+        		  android:text="@string/str_take"
+        		  locservice:font="fonts/RobotoRegular.ttf"
+        		  android:textColor="@color/black"
+        		  android:layout_gravity="center_vertical"
+        		  android:gravity="center_vertical" />
+    
+    
+    
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/layoutItem"
+    >
+
+  	<LinearLayout
+           android:id="@+id/layoutDateRate"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="60dp"
+    	   android:layout_marginRight="28dp"
+           android:orientation="horizontal" >
+   		<com.locservice.ui.controls.CustomTextView
+               android:id="@+id/textViewDate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/grey_info"
+               android:textSize="14sp"
+               locservice:font="fonts/RobotoRegular.ttf" />
+		<RatingBar android:id="@+id/ratingBarReview"
+		            android:layout_width="wrap_content"
+		            android:layout_height="15dp"
+		            android:layout_marginLeft="3dp"
+		            android:isIndicator="true"
+		            android:progressDrawable="@drawable/rating_bar_list_state"
+		            android:stepSize="1.0"
+		            />
+    </LinearLayout>
+   	<LinearLayout
+	            android:id="@+id/layoutDesc"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginLeft="60dp"
+    	   		android:layout_marginRight="28dp"
+    	   		android:layout_marginBottom="10dp"
+	            android:orientation="vertical" >
+		<com.locservice.ui.controls.CustomTextView
+	                android:id="@+id/textViewDesc"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/black"
+	                android:layout_gravity="center_horizontal"
+	                android:textSize="16sp"
+	                locservice:font="fonts/RobotoRegular.ttf" />
+  	</LinearLayout>
+	<!-- divider line -->
+  	<View
+        android:id="@+id/dividerLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/divider_line_holo" />
+
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_main_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_register"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/top_padding_for_status_bar">
+
+        <FrameLayout
+            android:id="@+id/layoutBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_arrow_back_white"
+                android:contentDescription="@null" />
+
+        </FrameLayout>
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Без телефона никак"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            locservice:font="fonts/RobotoRegular.ttf" />
+
+        <FrameLayout
+            android:id="@+id/layoutClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewClear"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_close"
+                android:contentDescription="@null" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:layout_weight="1">
+
+
+    <FrameLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewFirstNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:text="+"
+                android:textColor="#ffffff"
+                android:textSize="32sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+
+                <com.locservice.ui.controls.CustomEditTextView
+                    android:id="@+id/editTextEddFieldHint"
+                    android:layout_width="@dimen/register_phone_size"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:hint="@string/str_phone_register_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="14"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#99ffffff"
+                    android:textSize="32sp"
+                    android:enabled="false"
+                    android:editable="false"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <com.locservice.ui.controls.CustomEditTextView
+                    android:id="@+id/editTextEddField"
+                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/register_phone_size"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:singleLine="true"
+                    android:text="7"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#99ffffff"
+                    android:textSize="32sp"
+                    locservice:font="fonts/RobotoRegular.ttf" >
+                    <requestFocus/>
+                </com.locservice.ui.controls.CustomEditTextView>
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_horizontal"
+        android:text="Пришлем проверочный код.\nУ водителей номер не остаются.\nБез спама"
+        android:textColor="#70ffffff"
+        android:textSize="16sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewUnderline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_horizontal"
+        android:text="Отправить еще раз "
+        android:textColor="#70ffffff"
+        android:textSize="16sp"
+        android:visibility="gone"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewOk"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawable_white_selector"
+        android:gravity="center"
+        android:text="@string/str_skip"
+        android:textColor="#e75a3c"
+        android:textSize="30sp"
+        android:visibility="gone"
+        locservice:font="fonts/RobotoLight.ttf" />
+
+    </LinearLayout>
+
+</LinearLayout>

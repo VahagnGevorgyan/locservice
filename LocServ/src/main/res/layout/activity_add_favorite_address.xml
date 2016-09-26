@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.locservice.ui.AddFavoriteAddressActivity">
+
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_order_history_top"
+        android:paddingBottom="10dp"
+        android:paddingTop="@dimen/header_top_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_arrow_back_white" />
+
+            </LinearLayout>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <ImageView
+                android:id="@+id/img_dummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_list_margin_side"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@null" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.locservice.ui.controls.CustomEditTextView
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutHeader"
+        android:background="@color/transparent"
+        android:hint="@string/str_name2"
+        android:padding="16dp"
+        android:nextFocusDown="@+id/editTextAddress"
+        android:imeOptions="actionNext"
+        android:textCursorDrawable="@drawable/edit_text_cursor_gray"
+        android:inputType="textCapSentences"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_info"
+        android:textSize="20sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <View
+        android:id="@+id/viewNameLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextName"
+        android:layout_marginLeft="16dp"
+        android:background="#dddddd" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/editTextNameDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewNameLine"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:text="@string/str_street_home"
+        android:textColor="#F17861"
+        android:textSize="14dp"
+        android:visibility="gone"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <com.locservice.ui.controls.CustomEditTextView
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewNameLine"
+        android:background="@color/transparent"
+        android:hint="@string/str_address"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/editTextEntrance"
+        android:textCursorDrawable="@drawable/edit_text_cursor_gray"
+        android:inputType="text"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_info"
+        android:textSize="20sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <ProgressBar
+        android:id="@+id/progressBarSearch"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextNameDescription"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/viewAddressLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextAddress"
+        android:layout_marginLeft="16dp"
+        android:background="#dddddd" />
+
+    <LinearLayout
+        android:id="@+id/layoutCommentAndEntrance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAddressLine"
+        android:orientation="horizontal">
+
+        <com.locservice.ui.controls.CustomEditTextView
+            android:id="@+id/editTextEntrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextNameDescription"
+            android:textCursorDrawable="@drawable/edit_text_cursor_gray"
+            android:background="@color/transparent"
+            android:ems="6"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:nextFocusDown="@+id/editTextComment"
+            android:hint="@string/str_entrance"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey_info"
+            android:textSize="20sp"
+            locservice:font="fonts/RobotoRegular.ttf" />
+
+        <View
+            android:id="@+id/viewVertical"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editTextAddress"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#dddddd" />
+
+        <com.locservice.ui.controls.CustomEditTextView
+            android:id="@+id/editTextComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextNameDescription"
+            android:textCursorDrawable="@drawable/edit_text_cursor_gray"
+            android:background="@color/transparent"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences"
+            android:hint="@string/str_how_to"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey_info"
+            android:textSize="20sp"
+            locservice:font="fonts/RobotoRegular.ttf" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewCommentAndEntrance"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layoutCommentAndEntrance"
+        android:layout_marginLeft="16dp"
+        android:background="@color/grey_info" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/editTextSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewCommentAndEntrance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_save_favorite"
+        android:ems="6"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/str_save"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <!-- SEARCH RECYCLER VIEW  -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewSearchAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewNameLine"
+        android:divider="@null"
+        android:layout_marginTop="35dp"
+        android:fitsSystemWindows="true"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "498052300612",
+    "firebase_url": "https://locservice-android-4b9ef.firebaseio.com",
+    "project_id": "locservice-android-4b9ef",
+    "storage_bucket": "locservice-android-4b9ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498052300612:android:6a53d5163b497401",
+        "android_client_info": {
+          "package_name": "com.locservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498052300612-2fgabek7k2hm9tpjhnkobr506qjfgi0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBvjMuf3Ys8IKRbAvO9qkzCuwBSNPUYJk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

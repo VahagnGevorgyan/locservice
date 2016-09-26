@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+  			  xmlns:locservice="http://schemas.android.com/apk/res-auto"
+  	    	  android:layout_height="match_parent"
+         	  android:layout_width="match_parent"
+          	  android:orientation="horizontal"
+         	  android:visibility="visible"
+       		  android:gravity="center_horizontal"
+       		  >
+   		<!-- counter number -->
+      	<LinearLayout android:id="@+id/counter"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  android:orientation="horizontal"
+		  >
+			<!-- 5 -->
+			<include android:id="@+id/layoutDigit5"
+				layout="@layout/counter_digit_other"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<!-- 4 -->
+			<include android:id="@+id/layoutDigit4"
+				layout="@layout/counter_digit_other"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<!-- 3 -->
+			<include android:id="@+id/layoutDigit3" 
+			    	 layout="@layout/counter_digit_other" 
+			    	 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"/>
+			<!-- 2 -->
+			<include android:id="@+id/layoutDigit2" 
+			    	 layout="@layout/counter_digit_other"
+			    	 android:layout_width="wrap_content"
+		 			 android:layout_height="wrap_content"/>
+			<!-- 1 -->
+			<include android:id="@+id/layoutDigit1" 
+			    	 layout="@layout/counter_digit" 
+			    	 android:layout_width="wrap_content"
+		 			 android:layout_height="wrap_content"/>
+		</LinearLayout>
+		<!-- ruble & expand arrow -->
+		<com.locservice.ui.controls.CustomTextView
+              android:id="@+id/textViewCounterRuble"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="@string/str_ruble"
+              android:textColor="#ffffff"
+              android:textSize="50sp"
+              locservice:font="fonts/RobotoLight.ttf"
+              />
+          <ImageView
+              	android:id="@+id/imageViewArrow"
+             	android:layout_width="20dp"
+			    android:layout_height="20dp"
+			    android:layout_gravity="center_vertical"
+			    android:contentDescription="@null"
+			    android:background="@drawable/ic_arrow_down" />
+</LinearLayout>
+			 

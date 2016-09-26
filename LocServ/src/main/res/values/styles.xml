@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+     <!-- The default theme. -->
+    <style name="Theme" parent="android:style/Theme" />
+    
+    <!-- Base Theme.LocService theme -->
+    <style name="Theme.LocService" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="Theme.LocService.NoTitle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <!-- ProgressBar styles -->
+    <style name="ProgressBar.Horizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+
+    </style>
+    
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.MyTabLayout" parent="Theme.AppCompat.NoActionBar" >
+        <!--this for multiTab-->
+        <!--<item name="tabIndicatorColor">#fd7662</item>-->
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="android:background">#ffffff</item>
+
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+
+    </style>
+
+    <style name="LocServiceText.LoginText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="LocServiceText.LoginText2" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#009688</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#ce000000</item>
+        <!-- Used for the background -->
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="SwitchCompatStyle" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#ed5c3f</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/grey_info</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/gray</item>
+    </style>
+
+</resources>

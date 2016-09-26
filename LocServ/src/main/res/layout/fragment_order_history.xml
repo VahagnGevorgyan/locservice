@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- MAIN CONTENT-->
+    <RelativeLayout
+        android:id="@+id/layoutMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_order_history_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/header_top_padding">
+
+                <LinearLayout
+                    android:id="@+id/layoutBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewBack"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_arrow_back_white" />
+                </LinearLayout>
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewTopTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/str_trips"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <ImageView
+                    android:id="@+id/img_dummy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_list_margin_side"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@null" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/recycler_view_orders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutHeader"
+            android:scrollbars="vertical" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/black_progress"
+            android:visibility="visible"></ProgressBar>
+        <!--android:indeterminateDrawable="@drawable/white_progress"-->
+
+    </RelativeLayout>
+
+    <!--REGISTER CONTENT-->
+    <RelativeLayout
+        android:id="@+id/layoutRegisterContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/reg_order_history" />
+
+        <RelativeLayout
+            android:id="@+id/layoutGoToRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/drawable_white_selector"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageViewEnterLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_reg_enter" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/imageViewEnterLogo"
+                android:background="@drawable/drawable_white_selector"
+                android:gravity="center"
+                android:text="@string/str_enter"
+                android:layout_marginLeft="5dp"
+                android:textColor="#e75a3c"
+                android:textSize="30sp"
+                locservice:font="fonts/RobotoLight.ttf" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

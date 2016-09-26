@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp">
+    <!--android:background="@color/blue"-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewAdditionalTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="20 минут по тарифу Стандарт - 12 r За минуту"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            locservice:font="fonts/RobotoMedium.ttf" />
+
+    </LinearLayout>
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewAdditionalPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:gravity="right|bottom"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewAdditionalFieldsRuble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="2dp"
+        android:gravity="right|bottom"
+        android:text="@string/str_ruble"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+</LinearLayout>

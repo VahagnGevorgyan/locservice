@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TOP LAYOUT -->
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_top_bar_height"
+        android:background="@drawable/bg_order_registered"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imageViewLoadingRight"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/order_top_bar_height_anim"
+            android:background="@drawable/load_order_right"
+            android:contentDescription="@null"
+            android:src="@null"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/imageViewLoadingLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/order_top_bar_height_anim"
+            android:background="@drawable/load_order_left"
+            android:contentDescription="@null"
+            android:src="@null"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/layoutTopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/top_padding_for_status_bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutTopMenu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewTopMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_menu_white"/>
+
+                </LinearLayout>
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewTopTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/order_top_title_margin_top"
+                    android:text="@string/str_order_registered"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    locservice:font="fonts/RobotoRegular.ttf"/>
+
+                <FrameLayout
+                    android:id="@+id/layoutClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/imageViewClose"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_close"
+                        android:contentDescription="@null"
+                        android:gravity="top"
+                        android:src="@null"/>
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- TRIP COUNTER BLOCK -->
+        <include
+            android:id="@+id/layoutTripCounter"
+            layout="@layout/layout_trip_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/order_top_padding"
+            android:layout_marginRight="@dimen/order_top_padding"
+            android:layout_marginTop="@dimen/counter_margin_top"/>
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewTopContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutTripCounter"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:paddingTop="@dimen/top_padding_for_status_bar"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:maxLines="2"
+            tools:text="Order Info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_top_bar_subtitle_text_size"
+            />
+        <!--android:layout_marginLeft="@dimen/top_layout_content"-->
+        <!--android:layout_marginRight="@dimen/top_layout_content"-->
+
+
+        <RelativeLayout
+            android:id="@+id/layoutTopBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/textViewTopContent"
+            android:layout_marginLeft="@dimen/order_top_padding"
+            android:layout_marginRight="@dimen/order_top_padding"
+            android:orientation="horizontal">
+            <!--android:layout_marginBottom="@dimen/activity_vertical_margin"-->
+            <!--android:layout_marginBottom="@dimen/order_top_padding_bottom"-->
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewChangeOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/str_change_order"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                locservice:font="fonts/RobotoMedium.ttf"/>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewCancelConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/str_cancel"
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                locservice:font="fonts/RobotoMedium.ttf"/>
+
+
+            <LinearLayout
+                android:id="@+id/layoutCallAndGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/textViewCancel"
+                android:orientation="horizontal">
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewGotoDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_go_to_driver"
+                    android:textColor="@color/black"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    locservice:font="fonts/RobotoMedium.ttf"/>
+
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewCallDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_call_driver"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:visibility="gone"
+                    locservice:font="fonts/RobotoMedium.ttf"/>
+
+            </LinearLayout>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/str_cancel"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:textSize="18sp"
+                locservice:font="fonts/RobotoMedium.ttf"/>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewConfirmOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:text="@string/str_confirm_order"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                locservice:font="fonts/RobotoMedium.ttf"/>
+
+        </RelativeLayout>
+
+        <!-- TRIP CONTENT -->
+        <LinearLayout
+            android:id="@+id/layoutTripContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textViewTopContent"
+            android:layout_marginTop="48dp"
+            android:orientation="vertical"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignTop="@+id/textViewOWInfo"
+                    android:overScrollMode="never"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutAdditionalFields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutServices"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"></LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewOWInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="16dp"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="@string/str_price_help"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    locservice:font="fonts/RobotoRegular.ttf"/>
+                <!--android:layout_marginBottom="@dimen/order_ow_screen_help_center_margin"-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.locservice.ui.controls.SlidingUpPanelLayout
+            android:id="@+id/sliding_layout"
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:alpha="1.0"
+            android:gravity="bottom"
+            app:paralaxOffset="@dimen/paralax_offset"
+            app:shadowHeight="4dp"
+            sothree:overlay="false"
+            >
+
+            <RelativeLayout
+                android:id="@+id/layoutBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="vertical">
+                <!-- MAP -->
+                <RelativeLayout
+                    android:id="@+id/fragment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"/>
+                <!-- HEADER -->
+                <RelativeLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/img_dummy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/common_list_margin_side"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@null"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutMapScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"/>
+
+                <RelativeLayout
+                    android:id="@+id/layoutMapScreenBlur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/map_blur_layer"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollViewSlidePanelContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/slide_panel_content_height"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    android:overScrollMode="never">
+
+                    <LinearLayout
+                        android:id="@+id/layoutSlidePanelContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <!-- FROM -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewItemFrom"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_from"
+                                android:contentDescription="@null"/>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewFrom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurFrom"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- TO -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewItemTo"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_to"
+                                android:contentDescription="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewTo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurTo"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- DATE -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewItemDate"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_date"
+                                android:contentDescription="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurDate"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- TARIFF -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemTariff"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewItemTariff"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_tariff"
+                                android:contentDescription="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewTariff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurTariff"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- PAYMENT -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemPayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewPayment"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_payment"
+                                android:contentDescription="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurPayment"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- SERVICE -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemService"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewItemTariffService"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_service"
+                                android:contentDescription="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewService"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurService"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- CHILD SEAT -->
+                        <LinearLayout
+                            android:id="@+id/layoutItemChild"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imageViewItemChildSeat"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_child_seat"
+                                android:contentDescription="@null"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recyclerViewChild"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:overScrollMode="never"
+                                    android:scrollbars="none"/>
+
+                                <ImageView
+                                    android:id="@+id/imageViewBlurChild"
+                                    android:layout_width="15dp"
+                                    android:layout_height="65dp"
+                                    android:background="@drawable/bg_menu_blur_layout"
+                                    android:contentDescription="@null"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!-- COMMENT -->
+                        <RelativeLayout
+                            android:id="@+id/layoutItemComment"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="35dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/layoutComment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="16dp"
+                                android:orientation="horizontal"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/imageViewComment"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/comment_cloud_orange"
+                                    android:contentDescription="@null"/>
+
+                                <com.locservice.ui.controls.CustomTextView
+                                    android:id="@+id/textViewComment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="24dp"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="@string/str_comment_title"
+                                    android:textColor="@color/grey_info"
+                                    android:textSize="18sp"
+                                    locservice:font="fonts/RobotoLight.ttf"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutItemForScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:visibility="visible">
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+        </com.locservice.ui.controls.SlidingUpPanelLayout>
+
+        <View
+            android:id="@+id/layoutForInScreenTools"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <!-- Tariff Bar -->
+    <RelativeLayout
+        android:id="@+id/layoutSectionTariff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_tariff_sec"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:longClickable="false"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="visible">
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewTariffTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/onward_text"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            locservice:font="fonts/RobotoRegular.ttf"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTariffTitle"
+            android:visibility="visible"
+            android:gravity="center_horizontal">
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTariffPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_tariff_test"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                locservice:font="fonts/RobotoRegular.ttf"/>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTariffTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible"
+                locservice:font="fonts/RobotoRegular.ttf"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageViewTopBarShadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/order_top_bar_height"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutMapMenu"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="@dimen/menu_button_top_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <!--android:src="@drawable/bg_menu_blur_layout"-->
+
+        <!--<ImageView
+            android:id="@+id/imageViewMapMenuBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_menu_blur"
+            android:layout_centerInParent="true"
+            />-->
+
+        <!-- menu black -->
+        <ImageView
+            android:id="@+id/imageViewMapMenu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_menu_black"
+            android:visibility="visible"/>
+
+        <!--<com.wnafee.vector.MorphButton
+            android:id="@+id/imageViewMapMenu"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="top|center_horizontal"
+            android:padding="10dp"
+            android:background="@drawable/bg_menu_blur"
+            app:vc_startDrawable="@drawable/ic_drawer_to_arrow"
+            app:vc_endDrawable="@drawable/ic_arrow_to_drawer"/>-->
+
+        <!--<com.balysv.materialmenu.MaterialMenuView
+            android:id="@+id/imageViewMapMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mm_strokeWidth="2"
+            app:mm_visible="true"
+            app:mm_color="#000000"
+            app:mm_transformDuration="400"
+            app:mm_scale="1.4"
+            android:layout_centerInParent="true"
+
+            />
+        -->
+
+
+    </RelativeLayout>
+
+</FrameLayout>

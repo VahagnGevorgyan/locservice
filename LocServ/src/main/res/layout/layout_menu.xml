@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLeftDrawer"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bg"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingTop="@dimen/top_padding_for_status_bar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutMenuTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <!-- Settings -->
+            <LinearLayout
+                android:id="@+id/layoutSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="24dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_settings" />
+            </LinearLayout>
+            <!-- Circle Avatar -->
+            <!--<com.locservice.ui.controls.RoundedImageView
+                android:id="@+id/imageViewAvatar"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                android:src="@drawable/driver_photo"
+                android:scaleType="fitStart"
+                />-->
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                android:id="@+id/imageViewAvatar"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_anonym"
+                app:riv_corner_radius="30dip"
+                app:riv_border_color="#333333"
+                app:riv_oval="true" />
+
+            <!-- User Information -->
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageViewAvatar"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                android:layout_marginTop="35dp"
+                android:text="@string/str_name"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewRewards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewFullName"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                android:layout_marginTop="11dp"
+                android:text="@string/str_menu_rewards"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:visibility="gone"
+                locservice:font="fonts/RobotoRegular.ttf" />
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewFullName"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                android:layout_marginTop="11dp"
+                android:text="@string/str_sale"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:visibility="gone"
+                locservice:font="fonts/RobotoRegular.ttf" />
+            <!-- Menu Items -->
+            <ListView
+                android:id="@+id/listViewMenuItems"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_list_height"
+                android:layout_below="@id/textViewRewards"
+                android:layout_gravity="start"
+                android:layout_marginTop="13dp"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:overScrollMode="never"
+                android:listSelector="@android:color/transparent" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

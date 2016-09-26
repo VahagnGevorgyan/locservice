@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:gravity="center_vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewItem"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/grey_info"
+            tools:text="@string/str_cancel"
+            locservice:font="fonts/RobotoLight.ttf"
+            />
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewItemSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:textColor="@color/grey_info"
+            locservice:font="fonts/RobotoLight.ttf"
+            />
+    </LinearLayout>
+
+</LinearLayout>

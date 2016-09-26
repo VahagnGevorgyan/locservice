@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="72dp"
+    android:paddingRight="16dp"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:id="@+id/layoutMessageContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_user_right" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="0dp"
+            android:background="@drawable/bg_chat_user"
+            android:orientation="vertical">
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewOperatorOrTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="#f7c68b"
+                android:textSize="13sp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewDoSomething"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                locservice:font="fonts/RobotoMedium.ttf" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.locservice.ui.controls.RoundedImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_anonym" />
+
+
+</LinearLayout>

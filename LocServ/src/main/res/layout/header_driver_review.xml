@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutItem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_white_selector"
+        android:orientation="horizontal">
+
+        <com.locservice.ui.controls.DynamicHeightImageView
+            android:id="@+id/imageViewThumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="11dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_map" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layoutNameDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/layoutPrice"
+                android:orientation="vertical">
+
+                <com.locservice.ui.controls.AutoResizeTextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="15"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:text="Address"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#000000"
+                    tools:text="Date and Tariff"
+                    android:textSize="14sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ee5b3b"
+                    android:textSize="26sp"
+                    tools:text="15\u20BD"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:isIndicator="true"
+                    android:progressDrawable="@drawable/rating_bar_list_state"
+                    android:stepSize="1.0" />
+            </LinearLayout>
+            <!-- divider line -->
+            <View
+                android:id="@+id/dividerLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_line_holo" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- divider line -->
+    <View
+        android:id="@+id/dividerLineLarge"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/layoutItem"
+        android:background="@color/divider_line_holo"
+        android:visibility="gone" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewReviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerLineLarge"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/str_reviews"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        locservice:font="fonts/RobotoMedium.ttf" />
+
+
+</LinearLayout>

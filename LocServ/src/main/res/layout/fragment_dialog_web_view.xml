@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/webViewDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/top_padding_for_status_bar"
+        android:layout_weight="1"
+        >
+
+    </WebView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"/>
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewOk"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/str_ok"
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:background="@drawable/drawable_white_selector"
+        android:textSize="50sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+
+</LinearLayout>

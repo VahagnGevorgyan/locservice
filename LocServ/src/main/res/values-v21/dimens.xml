@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_padding_for_status_bar">24dp</dimen>
+    <dimen name="menu_button_top_margin">38dp</dimen>
+    <dimen name="status_top_padding">32dp</dimen>
+    <dimen name="header_top_padding">34dp</dimen>
+    <dimen name="search_fragment_top_padding">40dp</dimen>
+    <dimen name="counter_margin_top">74dp</dimen>
+
+    <dimen name="driver_main_content_margin">104dp</dimen>
+
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutOrderItem"
+	android:layout_height="65dp"
+    android:layout_width="match_parent" 
+    android:paddingLeft="16dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+	<LinearLayout
+		android:id="@+id/layoutTitle"
+		android:orientation="horizontal"
+		android:layout_width="0sp"
+		android:layout_weight="0.19"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical">
+
+		<com.locservice.ui.controls.CustomTextView
+			android:id="@+id/textViewStartTitle"
+			android:layout_height="wrap_content"
+			android:layout_width="0dp"
+			android:textSize="14sp"
+			android:textColor="@color/black"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1"
+			locservice:font="fonts/RobotoRegular.ttf" />
+
+	</LinearLayout>
+
+	<ImageView android:id="@+id/imageViewItem"
+		android:layout_height="20dp"
+		android:layout_width="20dp"
+		android:background="@drawable/ic_point_end"
+		android:layout_gravity="center_vertical"
+		android:contentDescription="@null"/>
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_weight="0.81">
+
+	<android.support.v7.widget.RecyclerView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/rvListView"
+		/>
+
+	<com.locservice.ui.controls.CustomHorizontalScrollView
+		android:id="@+id/scrollViewOrder"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_centerVertical="true"
+		android:visibility="gone"
+		android:overScrollMode="never"
+		android:layout_marginLeft="5dp"
+		android:scrollbars="none"
+		>
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:orientation="horizontal"
+			tools:ignore="UselessLeaf" >
+		</LinearLayout>
+
+	</com.locservice.ui.controls.CustomHorizontalScrollView>
+
+	<com.moldedbits.infinitecarousel.InfiniteCarousel
+		android:id="@+id/carouselViewOrder"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerVertical="true"
+		android:overScrollMode="never"
+		android:visibility="gone"
+		android:layout_marginLeft="5dp"
+		android:scrollbars="none"
+		/>
+
+		<ImageView
+			android:id="@+id/imageViewBlur"
+			android:layout_width="15dp"
+			android:layout_height="match_parent"
+			android:background="@drawable/bg_menu_blur_layout"
+			android:contentDescription="@null"/>
+
+	</RelativeLayout>
+
+
+ </LinearLayout>
+				   
+		         	

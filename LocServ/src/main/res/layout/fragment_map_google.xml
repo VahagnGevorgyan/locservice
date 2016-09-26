@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_main_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- MAP -->
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Helper view to manage touches -->
+        <View
+            android:id="@+id/touchHelperView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <!-- MARKER LOCATION -->
+    <RelativeLayout
+        android:id="@+id/layoutMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/imageViewLocationMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:paddingBottom="47dp"
+            android:src="@drawable/ic_marker_point_2" />
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewLocationMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:paddingTop="5dp"
+            android:lineSpacingExtra="-4dp"
+            android:textColor="@android:color/white"
+           />
+        <ProgressBar
+            android:id="@+id/progressBarMarker"
+            android:indeterminateDrawable="@drawable/white_progress"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="11dp"
+            android:layout_height="25dp"
+            android:layout_width="25dp">
+        </ProgressBar>
+
+    </RelativeLayout>
+
+
+    <!-- MAP ICONS -->
+    <RelativeLayout
+        android:id="@+id/layoutMapIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/map_container"
+        android:layout_alignRight="@id/map_container"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/imageButtonLocation"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_my_loc"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/imageButtonZoom"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/imageButtonLocation"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:background="@drawable/ic_zoom"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <!-- Driver Bar -->
+    <RelativeLayout
+        android:id="@+id/layoutSectionDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/map_container"
+        android:layout_alignRight="@id/map_container"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/layoutImageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- AVATAR -->
+            <ImageView
+                android:id="@+id/imageViewDriver"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:contentDescription="@null"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/drawable_white_selector"
+                android:src="@drawable/ic_anonym" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewDriverRate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_driver_info_rate"
+                android:layout_gravity="right|top"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                locservice:font="fonts/RobotoMedium.ttf" />
+
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSectionDriverInfo"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_toRightOf="@+id/layoutImageContainer"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/dimen_driver_bottom_margin"
+            android:background="@drawable/drawable_white_selector"
+            android:longClickable="false">
+
+            <!-- INFORMATION -->
+            <LinearLayout
+                android:id="@+id/layoutDriverContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+                <!-- TOP -->
+                <LinearLayout
+                    android:id="@+id/layoutDriverContentTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewDriver"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_driver"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        locservice:font="fonts/RobotoMedium.ttf" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_car_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+
+                        android:background="@drawable/bg_car_number"
+                        android:orientation="horizontal">
+
+                        <com.locservice.ui.controls.CustomTextView
+                            android:id="@+id/textViewCarNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ic_car_number_left"
+                            android:text=" "
+                            android:textColor="#000000"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            locservice:font="fonts/RobotoRegular.ttf" />
+                        <!--android:text="@string/str_custom_car_number"-->
+
+                        <com.locservice.ui.controls.CustomTextView
+                            android:id="@+id/textViewCarNumberReg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ic_car_number_right"
+                            android:text="  "
+                            android:textColor="#000000"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            locservice:font="fonts/RobotoRegular.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- BOTTOM -->
+                <LinearLayout
+                    android:id="@+id/layoutDriverContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.locservice.ui.controls.AutoResizeTextView
+                        android:id="@+id/textViewCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_machine_brand"
+                        android:maxLines="1"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                    <ImageView
+                        android:id="@+id/imageViewDriverCar"
+                        android:layout_width="35dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/sedan_000000_driver_row"
+                        android:contentDescription="@null"/>
+
+
+                    <com.locservice.ui.controls.AutoResizeTextView
+                        android:id="@+id/textViewCarColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_color"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="5dp"
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+
+
+                    <!--<com.locservice.ui.controls.CustomTextView-->
+                    <!--android:id="@+id/textViewCarNumber"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/car_number_frame"-->
+                    <!--android:gravity="center_horizontal|center_vertical"-->
+                    <!--android:text="@string/str_custom_car_number"-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:textSize="14sp"-->
+                    <!--locservice:font="fonts/RobotoRegular.ttf" />-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

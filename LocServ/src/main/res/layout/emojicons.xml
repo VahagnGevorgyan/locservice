@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/emojis_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/emojis_tab_0_people"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/orca_emoji_tab_background"
+            android:src="@drawable/orca_emoji_category_people" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888888" />
+
+        <ImageButton
+            android:id="@+id/emojis_tab_1_nature"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/orca_emoji_tab_background"
+            android:src="@drawable/orca_emoji_category_nature" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888888" />
+
+        <ImageButton
+            android:id="@+id/emojis_tab_2_objects"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/orca_emoji_tab_background"
+            android:src="@drawable/orca_emoji_category_objects" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888888" />
+
+        <ImageButton
+            android:id="@+id/emojis_tab_3_cars"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/orca_emoji_tab_background"
+            android:src="@drawable/orca_emoji_category_cars" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888888" />
+
+        <ImageButton
+            android:id="@+id/emojis_tab_4_punctuation"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/orca_emoji_tab_background"
+            android:src="@drawable/orca_emoji_category_punctuation" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#888888" />
+
+        <ImageButton
+            android:id="@+id/emojis_backspace"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/orca_emoji_tab_dark_background"
+            android:src="@drawable/orca_emoji_backspace_back_normal" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/emojis_tab"
+        android:background="#8f8f8f" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/emojis_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/emojis_tab" >
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

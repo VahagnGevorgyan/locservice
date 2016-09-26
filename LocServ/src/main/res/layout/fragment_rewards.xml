@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- MAIN CONTENT-->
+    <FrameLayout
+        android:id="@+id/layoutMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ListView
+            android:id="@+id/listViewRewards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rewards"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/top_padding_for_status_bar">
+
+            <FrameLayout
+                android:id="@+id/layoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_arrow_back_white"
+                    android:contentDescription="@null" />
+
+            </FrameLayout>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:text="@string/str_rewards"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--REGISTER CONTENT-->
+    <RelativeLayout
+        android:id="@+id/layoutRegisterContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/reg_bonus" />
+
+        <RelativeLayout
+            android:id="@+id/layoutGoToRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/drawable_white_selector"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageViewEnterLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_reg_enter" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/imageViewEnterLogo"
+                android:background="@drawable/drawable_white_selector"
+                android:gravity="center"
+                android:text="@string/str_enter"
+                android:layout_marginLeft="5dp"
+                android:textColor="#e75a3c"
+                android:textSize="30sp"
+                locservice:font="fonts/RobotoLight.ttf" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

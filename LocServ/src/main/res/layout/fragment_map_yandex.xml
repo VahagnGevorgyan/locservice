@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- MAP -->
+   	<FrameLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:id="@+id/map_container">
+	
+	    <ru.yandex.yandexmapkit.MapView
+	        android:id="@+id/map"
+	      	android:tag="static"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"      	
+	        android:apiKey="n2PAlG-CL5tuvOEL~fLuZKwnJie42SaRqL-FeUmQOtJESqYuGD9yFn5CzN7ct~pRh4nbWnhajsbterWSsjgm2~Jf9TlllBqqTeBeyzctAdQ="/>
+	
+	</FrameLayout>  
+	
+   	<!-- MARKER LOCATION -->
+   	<ImageView android:id="@+id/imageViewLocationMarker"
+   	    	   android:layout_height="wrap_content"
+   	    	   android:layout_width="wrap_content"
+   	    	   android:layout_centerInParent="true"
+   	    	   android:src="@drawable/ic_loc"
+   	    	   android:paddingBottom="47dp"
+   	    	   android:contentDescription="@null"
+   	    	   />
+	
+   	<!-- MAP ICONS -->
+   	<RelativeLayout android:id="@+id/layoutMapIcons"
+   	    			android:layout_height="wrap_content"
+   	    			android:layout_width="wrap_content"
+   	    			android:layout_alignBottom="@id/map_container"
+	    			android:layout_alignRight="@id/map_container"
+	    			android:visibility="visible"
+	    			android:padding="10dp"
+   	    			>
+		<ImageButton
+		    android:id="@+id/imageButtonLocation"
+		    android:layout_width="56dp"
+		    android:layout_height="56dp"
+		    android:layout_gravity="bottom"
+		    android:background="@drawable/ic_my_loc"
+		    android:layout_marginBottom="10dp"
+		    android:contentDescription="@null"
+		     />
+		<ImageButton
+		    android:id="@+id/imageButtonZoom"
+		    android:layout_width="56dp"
+		    android:layout_height="56dp"
+		    android:layout_gravity="bottom"
+			android:visibility="gone"
+		    android:layout_below="@id/imageButtonLocation"
+		    android:background="@drawable/ic_zoom"
+		    android:contentDescription="@null"
+		     />
+   	</RelativeLayout>
+   	
+   	<!-- Driver Bar -->
+    <LinearLayout
+        android:id="@+id/layoutSectionDriver"
+        android:layout_height="71dp"
+        android:layout_width="match_parent"
+        android:layout_alignBottom="@id/map_container"
+		android:layout_alignRight="@id/map_container"
+        android:visibility="visible"
+        android:longClickable="false"
+        android:background="@drawable/drawable_white_selector"
+        android:layout_margin="8dp"
+        >
+		
+		<!-- AVATAR -->
+		<ImageView android:id="@+id/imageViewDriver"
+		    	   android:layout_height="71dp"
+		    	   android:layout_width="71dp"
+		    	   android:src="@drawable/ic_anonym"
+		    	   android:contentDescription="@null"/>
+		
+		<!-- INFORMATION -->
+		<LinearLayout android:id="@+id/layoutDriverContent"
+		    		  android:layout_height="wrap_content"
+		    		  android:layout_width="match_parent"
+		    		  android:layout_gravity="center_vertical"
+		    		  android:layout_marginLeft="16dp"
+		    		  android:layout_marginRight="8dp"
+		    		  android:orientation="vertical"
+		    		  >
+		    <!-- TOP -->
+			<LinearLayout
+				    android:id="@+id/layoutDriverContentTop"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_vertical" 
+				    android:orientation="horizontal"
+				    >
+			   	<com.locservice.ui.controls.CustomTextView
+	            	  android:id="@+id/textViewDriver"
+	            	  android:layout_height="wrap_content"
+	            	  android:layout_width="wrap_content"
+	            	  android:text="Константин"
+	            	  android:textSize="20sp"
+	            	  android:textColor="#000000"
+	            	  locservice:font="fonts/RobotoMedium.ttf"
+	            	  />
+			   	<com.locservice.ui.controls.CustomTextView
+	            	  android:id="@+id/textViewDriverRate"
+	            	  android:layout_height="wrap_content"
+	            	  android:layout_width="wrap_content"
+	            	  android:text="4,7"
+	            	  android:layout_marginLeft="9dp"
+	            	  android:paddingLeft="3dp"
+	            	  android:paddingRight="3dp"
+	            	  android:textSize="14sp"
+	            	  android:textColor="#ffffff"
+	            	  android:background="@drawable/driver_rate"
+	            	  locservice:font="fonts/RobotoMedium.ttf"
+	            	  />
+			</LinearLayout>
+			<!-- BOTTOM -->
+			<LinearLayout android:id="@+id/layoutDriverContent2"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_gravity="center_vertical"
+					    android:orientation="horizontal"
+					    >
+				<com.locservice.ui.controls.CustomTextView
+	            	  android:id="@+id/textViewCar"
+	            	  android:layout_height="wrap_content"
+	            	  android:layout_width="wrap_content"
+	            	  android:text="Тойта Камри, красная"
+	            	  android:textSize="14sp"
+	            	  android:textColor="#000000"
+	            	  locservice:font="fonts/RobotoRegular.ttf"
+	            	  /> 
+	           	<com.locservice.ui.controls.CustomTextView
+	           	      android:id="@+id/textViewCarNumber"
+	           	      android:layout_height="wrap_content"
+	           	      android:layout_width="wrap_content"
+	           	      android:layout_gravity="center_horizontal"
+	           	      android:gravity="center_horizontal|center_vertical"
+	           	      android:layout_marginLeft="10dp"
+	           	      android:textSize="14sp"
+	           	      android:textColor="#000000"
+	           	      android:background="@drawable/car_number_frame"
+	           	      locservice:font="fonts/RobotoRegular.ttf"
+	           	      />
+			</LinearLayout>
+		</LinearLayout>
+    </LinearLayout>
+       
+	
+</RelativeLayout>

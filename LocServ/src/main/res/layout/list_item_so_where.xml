@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:paddingBottom="10dp"
+	android:paddingTop="10dp"
+	android:paddingLeft="15dp"
+    android:orientation="horizontal" >
+
+	<com.locservice.ui.controls.CustomTextView
+	    	  android:id="@+id/textViewItem"
+		      android:layout_height="wrap_content"
+	       	  android:layout_width="wrap_content"
+	       	  android:gravity="center_vertical"
+	       	  android:textSize="18sp"
+	       	  android:layout_marginTop="1dp"
+	       	  android:layout_gravity="center_vertical"
+	       	  android:layout_marginRight="15dp"
+	       	  android:textColor="@color/grey_info"
+	       	  locservice:font="fonts/RobotoLight.ttf"
+	       	  />
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="15dp"
+		android:orientation="vertical"
+		>
+		<com.locservice.ui.controls.CustomTextView
+				  android:id="@+id/textViewItemSelected"
+				  android:layout_height="wrap_content"
+				  android:layout_width="wrap_content"
+				  android:textSize="20sp"
+				  android:layout_gravity="center_vertical"
+				  android:gravity="center_vertical"
+				  android:textColor="@color/black"
+				  android:visibility="gone"
+				  locservice:font="fonts/RobotoRegular.ttf"
+				  />
+		<!-- divider line -->
+		<!--<View
+			android:id="@+id/dividerLine"
+			android:layout_width="match_parent"
+			android:layout_height="1dip"
+			android:layout_marginTop="3dp"
+			android:background="@color/divider_line_address" />-->
+	</LinearLayout>
+
+</LinearLayout>

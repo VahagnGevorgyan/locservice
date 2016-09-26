@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- MAIN CONTENT-->
+    <FrameLayout
+        android:id="@+id/layoutMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <!-- TOP LAYOUT  -->
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_shadow"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_orange"
+                android:contentDescription="@null" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <ImageView
+                android:id="@+id/imageViewCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_call_black"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layoutBottom"
+            android:layout_below="@+id/layoutTitle">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:overScrollMode="never"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <!-- BOTTOM LAYOUT  -->
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/layoutBottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:id="@+id/imageViewAttachFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_attach_file"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutEddText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:maxHeight="200dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bg_user_right" />
+
+                    <com.locservice.ui.fragments.EmojiconEditText
+                        android:id="@+id/editEmojicon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_chat_user"
+                        android:hint="@string/str_your_message"
+                        android:maxLines="4"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#999999"
+                        android:textSize="18sp"
+                        locservice:font="fonts/RobotoRegular.ttf">
+
+                        <requestFocus />
+                    </com.locservice.ui.fragments.EmojiconEditText>
+
+                    <ImageView
+                        android:id="@+id/imageViewFace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/ic_tag_faces"
+                        android:contentDescription="@null" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewAvatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_send_message" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnLayEmogParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutBottomBar"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <fragment
+                    android:id="@+id/emojicons"
+                    class="com.locservice.ui.emojicon.EmojiconsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- SHADOW -->
+    <View
+        android:id="@+id/viewShadow"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/bg_bottom_shadow"
+        android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!--REGISTER CONTENT-->
+    <RelativeLayout
+        android:id="@+id/layoutRegisterContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/reg_chat" />
+
+        <RelativeLayout
+            android:id="@+id/layoutGoToRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/drawable_white_selector"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageViewEnterLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_reg_enter" />
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/imageViewEnterLogo"
+                android:background="@drawable/drawable_white_selector"
+                android:gravity="center"
+                android:text="@string/str_enter"
+                android:textColor="#e75a3c"
+                android:layout_marginLeft="5dp"
+                android:textSize="30sp"
+                locservice:font="fonts/RobotoLight.ttf" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

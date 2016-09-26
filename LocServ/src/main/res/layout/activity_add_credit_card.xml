@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rewards"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/layoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_arrow_back_white" />
+            </LinearLayout>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="@string/str_banks_cards"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <ImageView
+                android:id="@+id/imageViewAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_accept"
+                android:contentDescription="@null"
+                android:src="@null" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="16dp">
+        <!--android:paddingBottom="16dp"-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutCreditCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_credit_card"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+                <!--android:paddingBottom="16dp"-->
+
+                <ImageView
+                    android:id="@+id/imageViewClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_clear_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <com.locservice.ui.controls.CustomEditTextView
+                        android:id="@+id/editTextCardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_bank_card_number"
+                        android:ems="8"
+                        android:hint="@string/str_card_number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="23"
+                        android:nextFocusDown="@+id/editTextDate"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray_bank_card"
+                        android:textSize="20sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                    <com.locservice.ui.controls.CustomEditTextView
+                        android:id="@+id/editTextOwnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_bank_card_number"
+                        android:ems="8"
+                        android:hint="@string/str_card_owner_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:nextFocusDown="@+id/editTextDate"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="7dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray_bank_card"
+                        android:textSize="20sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.locservice.ui.controls.CustomEditTextView
+                            android:id="@+id/editTextDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:ems="4"
+                            android:hint="@string/str_bank_cark_date"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:nextFocusDown="@+id/editTextCVV"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_bank_card"
+                            android:textSize="20sp"
+                            locservice:font="fonts/RobotoRegular.ttf" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="5dp"
+                            android:layout_weight="1" />
+
+                        <com.locservice.ui.controls.CustomEditTextView
+                            android:id="@+id/editTextCVV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:ems="2"
+                            android:gravity="center"
+                            android:hint="@string/str_bank_card_cvv"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberPassword"
+                            android:maxLength="3"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_bank_card"
+                            android:textSize="20sp"
+                            locservice:font="fonts/RobotoRegular.ttf" />
+
+
+                    </LinearLayout>
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewRecognizeByPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/str_recognize_by_photo"
+                        android:textColor="@color/gray_bank_card"
+                        android:textSize="20sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewCVVInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/str_cvv_info"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewMasterCard"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:background="@drawable/master_card_white"/>
+            <ImageView
+                android:id="@+id/imageViewVisa"
+                android:layout_width="45dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:background="@drawable/visa_white"/>
+
+        </RelativeLayout>
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true"
+            android:gravity="bottom"
+            android:text="@string/str_banks_cards_info"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            locservice:font="fonts/RobotoRegular.ttf" />
+
+    </LinearLayout>
+
+</LinearLayout>

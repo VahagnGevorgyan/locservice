@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:gravity="center_vertical"
+    android:id="@+id/layout_active_order"
+    android:background="@drawable/bg_top_menu_green_bar">
+
+    <LinearLayout
+        android:id="@+id/layoutTopActiveOrderItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_padding_for_status_bar"
+        android:orientation="vertical"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical">
+        <!--android:layout_height="65dp"-->
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/str_driver_onway"
+            android:textColor="@color/white"
+            android:layout_marginLeft="24dp"
+            android:textSize="16sp"
+            locservice:font="fonts/RobotoRegular.ttf" />
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_gravity="center_vertical"
+            android:text="@string/str_will_arrive"
+            android:gravity="center_vertical"
+            android:textColor="#99ffffff"
+            android:visibility="gone"
+            android:layout_marginLeft="24dp"
+            android:textSize="14sp"
+            locservice:font="fonts/RobotoRegular.ttf" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

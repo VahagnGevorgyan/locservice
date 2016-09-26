@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	 <color name="orange">#ff5500</color>
+	 <color name="white">#ffffff</color>
+	 <color name="transparent">#00000000</color>
+	 <color name="date_color">#999999</color>
+	 <color name="black">#000000</color>
+	 <color name="gray_order">#aa000000</color>
+	 <color name="gray">#999999</color>
+	 <color name="blue">#0066cc</color>
+	 <color name="gold">#e6b121</color>
+	 <color name="blueback">#99FFFF</color>
+	 <color name="articlecolor">#3399FF</color> 
+	 <color name="article_title">#3399FF</color> 
+	 <color name="cachecolor">#8ad0e8</color>
+	 <color name="yellow_bonus">#f79224</color>
+	 <color name="grey_info">#b2b2b2</color>
+	 <color name="time_dialog">#ed5c3f</color>
+	 <color name="green_rate">#47B784</color>
+	 <color name="yellow_rate">#FDB933</color>
+	 <color name="divider_line_holo">#E8E8E8</color>
+	 <color name="divider_line_address">#F37830</color>
+
+	<!--<color name="colorPrimary">#03A9F4</color>-->
+	<color name="colorPrimaryDark">#000000</color>
+	<!--<color name="colorPrimaryLight">#B3E5FC</color>-->
+	<color name="colorAccent">#d0cdc6</color>
+	<color name="gray_bank_card">#a4a4a8</color>
+
+	<item name="image_background" type="color">#F7F7F7</item>
+ 	<item name="color_status_bar" type="color">#20000000</item>
+	<color name="colorComment">#adb0b1</color>
+	<color name="list_indicator">#f05b3b</color>
+
+	<color name="gray_tab_unselected">#cccccc</color>
+	<color name="orange_tab_selected">#ED6243</color>
+
+
+
+</resources>

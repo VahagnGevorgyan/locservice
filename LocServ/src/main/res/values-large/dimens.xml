@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="register_phone_size">280dp</dimen>
+    <dimen name="profile_social_panel_size">138dp</dimen>
+    <dimen name="order_top_bar_height">260dp</dimen>
+    <dimen name="order_top_bar_height_info">270dp</dimen>
+    <dimen name="order_top_bar_height_anim">260dp</dimen>
+    <dimen name="order_info_help_center_margin">110dp</dimen>
+    <dimen name="order_ow_screen_help_center_margin">130dp</dimen>
+</resources>

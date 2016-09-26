@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="top_layout_content">10dp</dimen>
+
+    <dimen name="slide_panel_content_height">500dp</dimen>
+    <dimen name="order_info_slide_panel_content_height">400dp</dimen>
+
+    <dimen name="slide_panel_height">220dp</dimen>
+    <dimen name="map_padding_two_field">130dp</dimen>
+    <dimen name="slide_panel_height_one_field">75dp</dimen>
+    <dimen name="map_padding_one_field">75dp</dimen>
+    <dimen name="slide_panel_height_driver">102dp</dimen>
+    <dimen name="paralax_offset">120dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- Serivce Options -->
+    <dimen name="so_item">18sp</dimen>
+    <dimen name="so_item_select">20sp</dimen>
+
+    <!-- NewOrderData Top Bar -->
+    <!--<dimen name="order_top_bar_height">240dp</dimen>-->
+    <dimen name="order_top_bar_height">216dp</dimen>
+    <dimen name="order_top_bar_height_info">226dp</dimen>
+    <dimen name="order_top_bar_height_anim">216dp</dimen>
+    <dimen name="order_top_padding">25dp</dimen>
+    <dimen name="order_top_padding_bottom">40dp</dimen>
+    <dimen name="order_top_padding_top">15dp</dimen>
+
+    <!-- ORDER INFO -->
+    <dimen name="order_info_editText_height">130dp</dimen>
+
+
+    <dimen name="order_top_title_margin_top">29dp</dimen>
+
+    <dimen name="top_padding_for_status_bar">0dp</dimen>
+    <dimen name="menu_button_top_margin">14dp</dimen>
+    <dimen name="status_top_padding">8dp</dimen>
+    <dimen name="header_top_padding">10dp</dimen>
+    <dimen name="search_fragment_top_padding">16dp</dimen>
+    <dimen name="counter_margin_top">50dp</dimen>
+
+    <dimen name="menu_left_margin">56dp</dimen>
+    <dimen name="driver_main_content_margin">80dp</dimen>
+    <dimen name="register_phone_size">250dp</dimen>
+    <dimen name="profile_social_panel_size">128dp</dimen>
+    <dimen name="order_info_help_center_margin">90dp</dimen>
+    <dimen name="order_ow_screen_help_center_margin">110dp</dimen>
+    <dimen name="dimen_driver_bottom_margin">8dp</dimen>
+    <dimen name="dimen_top_bar_sumtitle">22sp</dimen>
+    <dimen name="dimen_top_bar_subtitle_text_size">22sp</dimen>
+    <dimen name="carousel_item_top_padding">2dp</dimen>
+    <dimen name="menu_list_height">330dp</dimen>
+
+</resources>

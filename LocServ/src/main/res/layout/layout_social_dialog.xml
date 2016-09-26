@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_post_by"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewFB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_facebook"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="#39518e"
+            locservice:font="fonts/RobotoRegular.ttf"
+            />
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewVK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_vk"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="1dp"
+            android:background="#4c75a3"
+            android:padding="10dp"
+            locservice:font="fonts/RobotoRegular.ttf"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="int_register_phone_size">280</integer>
+    <integer name="int_order_info_added_animation_size">70</integer>
+    <integer name="int_order_ow_animation_size">48</integer>
+</resources>

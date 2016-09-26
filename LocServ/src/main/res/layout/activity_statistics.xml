@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bg"
+    android:orientation="vertical"
+    tools:context="com.locservice.ui.StatisticsActivity">
+
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/header_top_padding">
+
+            <LinearLayout
+                android:id="@+id/layoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_arrow_back_white" />
+            </LinearLayout>
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="@string/str_statistics"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                locservice:font="fonts/RobotoRegular.ttf" />
+
+            <ImageView
+                android:id="@+id/imageViewAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:contentDescription="@null"
+                android:src="@null" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/container_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- User Info Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <!-- Circle Avatar -->
+                <com.locservice.ui.controls.RoundedImageView
+                    android:id="@+id/imageViewAvatar"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginLeft="@dimen/menu_left_margin"
+                    android:src="@drawable/ic_anonym" />
+                <!-- User Information -->
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/menu_left_margin"
+                    android:layout_marginTop="35dp"
+                    android:text="Сергей Николаев"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewFullName"
+                    android:layout_marginLeft="@dimen/menu_left_margin"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/str_menu_rewards"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+            </LinearLayout>
+            <!-- Trips Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/menu_left_margin">
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewTrips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:textColor="#ffffff"
+                    android:textSize="56sp"
+                    tools:text="12"
+                    locservice:font="fonts/RobotoLight.ttf" />
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewTripsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_trips_low"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+            </LinearLayout>
+            <!-- FULL KM AND MINUTE Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/menu_left_margin">
+
+                <!-- KM Layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewKm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        tools:text="50"
+                        android:textColor="#ffffff"
+                        android:textSize="45sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewKmTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_kilometer"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                </LinearLayout>
+
+                <!-- Minute Layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="50dp">
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewMinute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        tools:text="35"
+                        android:textColor="#ffffff"
+                        android:textSize="45sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewMinuteTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_minute_low"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- SUM PRICE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="50dp">
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSumPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    tools:text="50"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSumPriceRuble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/str_ruble"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+
+            </LinearLayout>
+
+
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewBonusTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/str_travel_by_bonus"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                locservice:font="fonts/RobotoRegular.ttf" />
+            <!-- BONUS KM AND MINUTE Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/menu_left_margin">
+                <!-- KM Layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewBonusKm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="35"
+                        android:textColor="#ffffff"
+                        android:textSize="45sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewBonusKmTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_kilometer"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                </LinearLayout>
+                <!-- KM Layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="50dp">
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewBonusMinute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="35"
+                        android:textColor="#ffffff"
+                        android:textSize="45sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewBonusMinuteTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_minute_low"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- BONUS SUM PRICE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="50dp">
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSumBonusPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    tools:text="50"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSumBonusPriceRuble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/str_ruble"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+
+            </LinearLayout>
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewAverageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/str_average_trip"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_marginLeft="@dimen/menu_left_margin"
+                locservice:font="fonts/RobotoRegular.ttf" />
+            <!-- AVERAGE KM AND MINUTE Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/menu_left_margin">
+                <!-- AVERAGE KM Layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewAverageKm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="35"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewAverageKmTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_kilometer"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                </LinearLayout>
+                <!-- AVERAGE KM Layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="50dp">
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewAverageMinute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="35"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                    <com.locservice.ui.controls.CustomTextView
+                        android:id="@+id/textViewAverageMinuteTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_minute_low"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- AVG SUM PRICE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="50dp">
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSumAvgPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    tools:text="50"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSumAvgPriceRuble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/str_ruble"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+
+
+            </LinearLayout>
+
+            <!-- SPEED Layout-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginLeft="50dp">
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    tools:text="35"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewSpeedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_km_h"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

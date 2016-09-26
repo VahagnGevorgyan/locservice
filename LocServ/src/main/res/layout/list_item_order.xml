@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:locservice="http://schemas.android.com/tools"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<com.daimajia.swipe.SwipeLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/swipe"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		swipe:leftEdgeSwipeOffset="0dp"
+		swipe:rightEdgeSwipeOffset="0dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:background="#ffffff"
+			android:gravity="end|center_vertical"
+			android:tag="Bottom3"
+			android:weightSum="10">
+
+			<com.locservice.ui.controls.CustomTextView
+				android:id="@+id/textViewSave"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:background="@drawable/drawable_white_selector"
+				android:text="@string/str_save"
+				android:padding="16dp"
+				android:gravity="center"
+				android:visibility="gone"
+				android:textColor="@color/black"/>
+
+			<com.locservice.ui.controls.CustomTextView
+				android:id="@+id/textViewDelete"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="@string/str_remove"
+				android:textColor="@color/white"
+				android:padding="16dp"
+				android:visibility="gone"
+				android:gravity="center"
+				android:background="@drawable/drawable_red_selector"/>
+
+
+
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/layoutItem"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal"
+			android:gravity="center_vertical"
+			android:elevation="5dp" >
+
+			<com.locservice.ui.controls.DynamicHeightImageView
+				android:id="@+id/imageViewThumb"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="11dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginBottom="15dp"
+				android:layout_gravity="center_vertical"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ic_map"
+				/>
+
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="match_parent"
+				android:layout_marginLeft="15dp"
+				android:layout_gravity="center_vertical"
+				android:orientation="vertical" >
+
+				<LinearLayout
+					android:id="@+id/layoutNameDesc"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_toLeftOf="@+id/layoutPrice"
+					android:layout_centerVertical="true"
+					android:gravity="center_vertical"
+					android:orientation="vertical" >
+					<com.locservice.ui.controls.AutoResizeTextView
+						android:id="@+id/textViewName"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textColor="#000000"
+						android:maxLines="1"
+						android:textSize="20sp"
+						android:text="     "
+						locservice:font="fonts/RobotoRegular.ttf" />
+					<com.locservice.ui.controls.CustomTextView
+						android:id="@+id/textViewDescription"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="6dp"
+						android:textColor="#000000"
+						android:textSize="14sp"
+						android:text="     "
+						locservice:font="fonts/RobotoRegular.ttf" />
+				</LinearLayout>
+				<LinearLayout
+					android:id="@+id/layoutPrice"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_marginTop="20dp"
+					android:layout_marginRight="15dp"
+					android:orientation="vertical" >
+					<LinearLayout
+						android:id="@+id/layoutPriceSize"
+						android:orientation="horizontal"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal">
+
+						<com.locservice.ui.controls.CustomTextView
+							android:id="@+id/textViewPrice"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="#ee5b3b"
+							android:textSize="26sp"
+							locservice:font="fonts/RobotoRegular.ttf" />
+
+						<com.locservice.ui.controls.CustomTextView
+							android:id="@+id/textViewPriceRuble"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="#ee5b3b"
+							android:layout_marginLeft="2dp"
+							android:text="@string/str_ruble"
+							android:textSize="26sp"
+							locservice:font="fonts/RobotoRegular.ttf" />
+
+					</LinearLayout>
+
+					<RatingBar android:id="@+id/ratingBarOrder"
+						android:layout_width="wrap_content"
+						android:layout_height="15dp"
+						android:isIndicator="true"
+						android:progressDrawable="@drawable/rating_bar_list_state"
+						android:stepSize="1.0"
+						/>
+				</LinearLayout>
+
+
+				<!-- divider line -->
+				<View
+					android:id="@+id/dividerLine"
+					android:layout_width="match_parent"
+					android:layout_height="1dip"
+					android:layout_alignParentBottom="true"
+					android:background="#46bdbdbd" />
+
+			</RelativeLayout>
+
+
+
+		</LinearLayout>
+
+
+
+	</com.daimajia.swipe.SwipeLayout>
+
+</LinearLayout>

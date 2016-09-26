@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_white_selector"
+    android:gravity="clip_horizontal">
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewLanguageItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       "
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/divider_line_holo" />
+
+</LinearLayout>

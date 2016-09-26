@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources formatted="false">
+
+    <string name="app_name">LocService</string>
+
+    <string name="play_services_available">Google Play services is available</string>
+
+    <!-- MENU -->
+    <string-array name="menu_items">
+        <item>Новый заказ</item>
+        <item>Банковские карты</item>
+        <item>Мои поездки</item>
+        <item>Промокоды</item>
+        <item>Тарифы</item>
+        <item>Служба поддержки</item>
+        <item>О приложении</item>
+    </string-array>
+    <string name="str_will_arrive">Приедет примерно через 9 минут</string>
+    <string name="str_tariffs">Тарифы</string>
+
+    <!-- Service Options -->
+    <string-array name="so_from_items">
+        <item>Указать адрес</item>
+        <item>Добавить в любимые</item>
+    </string-array>
+    <string-array name="so_where_items">
+        <item>Скажу водителю</item>
+        <item>По адресу</item>
+    </string-array>
+    <string-array name="so_when_items">
+        <item>Сейчас</item>
+        <item>Указать время</item>
+    </string-array>
+    <string-array name="so_payment_items">
+        <item>Наличными</item>
+        <item>Промокоды</item>
+    </string-array>
+    <string-array name="so_child_seat_items">
+        <item>\u003C 10кг</item>
+        <item>9–18кг</item>
+        <item>15–25кг</item>
+        <item>22–36кг</item>
+    </string-array>
+
+    <!-- PAYMENT -->
+    <string name="payment_cash">Наличными</string>
+    <string name="payment_bonus">Бонусами</string>
+    <string name="payment_corporate">Корпоративная</string>
+    <string name="payment_credit_card">Кредиткой</string>
+
+    <!-- NewOrderData Registered -->
+    <string name="str_order_registered">Заказ оформлен</string>
+    <string name="str_order_registered_content">Водитель будет показан за {0} до прибытия</string>
+    <string name="str_minute_registered">30 минут</string>
+    <string name="str_change_order">ИЗМЕНИТЬ ЗАКАЗ</string>
+    <string name="str_cancel">ОТМЕНИТЬ</string>
+    <string name="str_call_driver">ПОЗВОНИТЬ</string>
+    <string name="str_go_to_driver">ИДУ</string>
+    <string name="str_confirm_order">ПОДТВЕРДИТЬ</string>
+
+    <string name="str_driver_distance">Приедет через {0} мин.</string>
+    <!-- Driver OnWay -->
+    <string name="str_driver_onway">Водитель в пути</string>
+    <!-- Driver Trip -->
+    <string name="str_price_help">Если сумма рассчитана неправильно, \n<u>обратитесь в службу поддержки</u></string>
+    <string name="str_ruble">\u20BD</string>
+    <!-- NewOrderData Information -->
+    <string name="str_order_payment">Оплата</string>
+
+    <string name="str_remove">Удалить</string>
+    <string name="str_save">Сохранить</string>
+
+    <string name="str_without_telephone">Без телефона никак</string>
+    <string name="str_telephone_message">Пришлем проверочный код.\nУ водителей номер не остается.\nБез спама</string>
+
+    <string name="str_now_code">А теперь код</string>
+    <string name="str_code_message">Для подтверждения номера \nвведите код из СMC</string>
+    <string name="str_send_code_again"><u>Отправить еще раз</u></string>
+    <string name="str_hint_code">Код</string>
+
+    <string name="str_email_address">Aдрес эл. почты</string>
+    <string name="str_email_message">При оплате банковской картой \nнужен почтовый ящик. Без спама, \nтолько квитанции </string>
+    <string name="str_hint_email">Введите ваш емаил</string>
+
+    <string name="str_email_validation_toast">Пожалуйста видите правильный майл</string>
+    <string name="str_code_validation_toast">Пожалуйста видите правильный код</string>
+    <string name="str_phone_validation_toast">Пожалуйста видите правильный телефонный номер</string>
+
+    <string name="str_arrived">Приехали! </string>
+    <string name="str_counter">0</string>
+    <string name="str_bonus_count">+0</string>
+    <string name="str_another_bonus"><u>Еще бонусов!</u></string>
+    <string name="str_want_more"><u>Хочу еще!</u></string>
+    <string name="str_send_feedback_3"><u>Расскажите</u>, что вас огорчило</string>
+    <string name="str_send_feedback_4"><u>Расскажите</u>, почему не пять</string>
+    <string name="str_send_feedback_5"><u>Похвалите</u> водителя. Отзывы важны</string>
+    <string name="str_arrived_vote">Оцените поездку и водителя</string>
+
+    <string name="str_order_bonus">\u20BD бонусов</string>
+    <string name="str_paid">Оплачено</string>
+    <string name="test_bonus_conut_1">0 \u20BD</string>
+
+
+    <string name="str_set_feedback">Расскажите, что вас огорчило</string>
+    <string name="str_score">Cчет</string>
+    <string name="str_trips">Поездки</string>
+    <string name="str_profile">Профиль</string>
+    <string name="str_send_feedback">ОТПРАВИТЬ ОТЗЫВ</string>
+
+
+    <!-- DIALOG TIME -->
+    <string name="str_today">Сегодня</string>
+    <string name="str_take">Забрать</string>
+    <string name="str_bring">Привести</string>
+    <string name="str_time_tab_take_message">Мы сами расчитаем время подачи, \nчтобы вы приехали вовремя</string>
+    <string name="str_time_tab_bring_message">Укажите желаемое время подачи машины</string>
+
+    <!-- SEARCH ADDRESS  -->
+    <string name="str_favorites">Избранное</string>
+    <string name="str_latest">Последние</string>
+
+    <string name="str_driver">Водитель</string>
+
+    <!-- REWARDS -->
+    <string name="str_rewards">Бонусы</string>
+    <string name="str_rewards_account">бонусов на счету</string>
+    <string name="str_set_promo_code">ВВЕСТИ ПРОМОКОД</string>
+    <string name="str_earn_rewards">Заработайте бонусы одним \nиз способов ниже</string>
+    <string name="str_for_bind_bank_card">За привязку \nбанковскай карты</string>
+    <string name="str_cost_trip">стоимости \nпоездки</string>
+    <string name="str_for_first_friend_trip">За первую поездку друга. \nПоделитесь сним промокодом:</string>
+    <string name="str_for_share">За публицкцию \nв соцсетиях приглашения \nв LocService</string>
+    <string name="str_send_post">СДЕЛАТЬ ПОСТ</string>
+    <string name="str_bind_card">ПРИВЯЗАТЬ КАРТУ</string>
+    <string name="str_order_by_app">Заказанная через \nприложение поездка \nвозвращает</string>
+    <string name="str_order_by_app_2">% своей \nстоимости</string>
+    <string name="str_order_taxi">ЗАКАЗАТЬ ТАКСИ</string>
+
+
+    <!-- REVIEW -->
+    <string name="str_reviews">Отзывы</string>
+    <string name="str_set_review">Оставить отзыв</string>
+    <string name="str_set_review_text">Поделитесь вашими \nзамечаниями и предложениями </string>
+
+    <!-- PROFILE -->
+    <string name="str_social_top">Загрузите данные из соцсетей, \nчтобы не вводить вручную</string>
+    <string name="str_facebook">ФЕЙСБУК</string>
+    <string name="str_vk">ВКОНТАКТЕ</string>
+    <string name="str_name">Имя</string>
+    <string name="str_photo">Фото</string>
+    <string name="str_statistics">Статистика</string>
+    <string name="str_email">Эл. почта</string>
+    <string name="str_telephone">Телефон</string>
+    <string name="str_bank_cards">Банковские карты</string>
+    <string name="str_social_network">Соцсети</string>
+    <string name="str_favorite">Любимые адреса</string>
+
+    <!-- FAVORITE ADDRESSES -->
+    <string name="str_addresses">Адреса</string>
+    <string name="str_home">Дом</string>
+
+    <!-- FB Release app id-->
+    <string name="facebook_app_id">1562746897334340</string>
+    <!-- VK Release app id-->
+    <integer name="com_vk_sdk_AppId">4879375</integer>
+    <!-- VK Debug app id-->
+    <!--<integer name="com_vk_sdk_AppId">5344790</integer>-->
+
+    <!-- CHAT -->
+    <string name="str_your_message">Ваше сообщение</string>
+    <string name="str_chat_first_message">Позвоните в LocService для заказа такси или получения помощи. Или просто напишите \nсообщение. </string>
+    <string name="str_call">ПОЗВОНИТЬ</string>
+    <string name="str_yesterday">Вчера</string>
+
+    <!-- NewOrderData -->
+    <string name="os_u">Не определено</string>
+    <string name="os_sc">ОЖИДАЕМ ПОПУТЧИКОВ</string>
+    <string name="os_r">ЗАКАЗ ОФОРМЛЕН</string>
+    <string name="os_a">ВОДИТЕЛЬ НАЗНАЧЕН</string>
+    <string name="os_rc">МАШИНА ПОДАНА</string>
+    <string name="os_br">Водитель отказался</string>
+    <string name="os_ow">В ПУТИ</string>
+    <string name="os_ar">ОПЛАТИТЕ ПОЕЗДКУ</string>
+    <string name="os_cc">ЗАКАЗ ОТМЕНЕН</string>
+    <string name="os_cp">ЗАКАЗ ЗАВЕРШЕН</string>
+    <string name="os_nc">МАШИНА НЕ НАЙДЕНА</string>
+    <string name="os_later_r">ЗАКАЗ ОФОРМЛЕН СУБ</string>
+    <string name="os_asap_r">ПОИСК ВОДИТЕЛЯ</string>
+    <string name="os_later_a">ВОДИТЕЛЬ НАЗНАЧЕН СУБ</string>
+    <string name="os_asap_a_busy">ВОДИТЕЛЬ НАЗНАЧЕН СУБ 2</string>
+    <string name="os_asap_a_this">ВОДИТЕЛЬ В ПУТИ</string>
+    <string name="os_news">news новость նորություն</string>
+    <string name="os_web_view_news">новость</string>
+    <string name="os_order_confirm">Заказ такси</string>
+
+    <!--GCM-->
+    <string name="gcm_SenderId">766661429454</string>
+    <string name="gcm_au">AUTHENTICATION_FAILED</string>
+    <string name="gcm_reg">From GCM: device successfully registered!</string>
+    <string name="gcm_err_reg">From GCM: error registration.</string>
+    <string name="gcm_unreg">From GCM: device successfully unregistered</string>
+    <string name="gcm_err_unreg">From GCM: unregister error</string>
+    <string name="gcm_del">From GCM: gcm deleted</string>
+    <string name="gcm_am">Получен ответ на ваш отзыв</string>
+
+    <string name="onward_text">Далее</string>
+
+    <string name="os_order_confirm_subtitle">Для расчёта стоимости нужен конечный адрес</string>
+
+    <string name="alert_order_not_created">Заказ Не Создан</string>
+    <string name="alert_order_exists">Заказ Уже Существует</string>
+    <string name="alert_update_client_info">Ошибка при смене фотографии</string>
+    <string name="alert_add_order_comment">Ошибка при добавлении комментария к заказу</string>
+    <string name="alert_empty_order_comment">Поле с комментарием к заказу не может быть пустым</string>
+    <string name="str_ok">Ок</string>
+    <string name="str_comment_hint">комментарий водителю</string>
+
+    <string name="str_menu_rewards"> ₽ бонусов</string>
+    <string name="str_language">Язык</string>
+    <string name="alert_max_child_seat">Вы можете выбрать максимум 2 детских кресла</string>
+
+    <array name="languages">
+        <item>Русский</item>
+        <item>"English"</item>
+        <item>Հայերեն</item>
+        <item>Français</item>
+        <item>Deutsch</item>
+        <item>한국어</item>
+    </array>
+
+    <string name="str_new_name">Имя</string>
+    <string name="str_new_email">E-mail</string>
+    <string name="alert_name_empty">Пожалуйста укажите имя</string>
+    <string name="alert_email_empty">Пожалуйста укажите E-mail</string>
+    <string name="str_take_photo">Сделать фото</string>
+    <string name="str_choose_from_gallery">Выбрать фото из галереи</string>
+
+    <!-- minute -->
+    <string name="str_minute">минут</string>
+    <string name="str_minute_short">мин</string>
+    <string name="str_tariff_test">₽ за минуту</string>
+    <string name="str_behind">за</string>
+
+    <!--Driver info-->
+    <string name="str_price"> ~</string>
+    <string name="str_rate">рейтинг</string>
+    <string name="str_your_rate">ваша оценка</string>
+    <string name="str_trip">поездок</string>
+    <string name="str_in_top">в топе</string>
+    <string name="str_number_symbol">№</string>
+    <string name="str_no_feedbacks">Нет отзывов</string>
+    <!--Credit card-->
+    <string name="str_banks_cards">Банковские карты</string>
+    <string name="str_banks_cards_info">При подключении карты \nмы спишем и сразу вернем 1 ₽</string>
+    <string name="str_card_number">Номер карты</string>
+    <string name="str_card_owner_name">Владелец карты</string>
+    <string name="str_bank_cark_date">ММ/ГГ</string>
+    <string name="str_bank_card_cvv">CVV</string>
+    <string name="str_recognize_by_photo"><u>Распознать по фото</u></string>
+    <string name="str_cvv_info">Последние три цифры \nна обороте карты</string>
+
+    <!-- Statistics-->
+    <string name="str_trips_low">поездки</string>
+    <string name="str_kilometer">километра</string>
+    <string name="str_minute_low">минута</string>
+    <string name="str_travel_by_bonus">Проехал за бонусы</string>
+    <string name="str_average_trip">Средняя поездка</string>
+    <string name="str_km_h">км/ч</string>
+
+    <string name="str_trip_prefix">поездк</string>
+    <string name="str_trip_by_up_5">поездок</string>
+    <string name="str_a_extension">а</string>
+    <string name="str_i_extension">и</string>
+    <string name="str_km_prifix">километр</string>
+    <string name="str_ov_extension">ов</string>
+    <string name="str_minute_prefix">минут</string>
+    <string name="str_y_extension">ы</string>
+    <string name="alert_empty_promocode">Promo Code can not be empty</string>
+    <string name="str_no_result">Нет результатов</string>
+    <string name="str_order_cancelled">Заказ отменен</string>
+    <string name="str_no_info_about_trip">Нет инфо о поездке</string>
+    <string name="alert_driver_phone_number">Problem whit driver phone number</string>
+    <string name="alert_informing_driver_to_come">Problem with informing driver to come</string>
+    <string name="str_name2">Название</string>
+    <string name="str_street_home">Улица, дом</string>
+    <string name="str_address">Адрес</string>
+    <string name="str_entrance">Подъезд</string>
+    <string name="str_how_to">Как проехать</string>
+    <string name="alert_remove_favorite_address">Ошибка при удалении любимого адреса</string>
+    <string name="alert_empty_name">Имя не может быть пустым</string>
+    <string name="alert_empty_address">Адрес не может быть пустым</string>
+    <string name="alert_wrong_address">Неправильный адрес</string>
+    <string name="alert_unbind_card">Ошибка при удалении кредитной. Попробуйте ещё раз</string>
+    <string name="alert_remove_order">Ошибка при удалении заказа. Попробуйте ещё раз</string>
+    <string name="str_comment_title">Комментарии и подъезд</string>
+    <string name="str_comment_message">Чем можем помочь?</string>
+
+    <!-- Permission-->
+    <eat-comment />
+
+    <string name="str_error_activate_permission">Пожалуйста, предоставьте доступы к данным</string>
+    <string name="settings">Настройки</string>
+    <string name="str_enter">Войти</string>
+
+
+    <string name="location_dialog_message">Включите геолокацию для доступа к данным о местоположении</string>
+    <string name="cancel">Отмена</string>
+    <string name="alert_select_address">Пожалуйста, выберите адрес</string>
+    <string name="str_reward">бонусов</string>
+
+    <!-- Network -->
+    <string name="str_network_state_check">Пожалуйста проверьте интернет соединение</string>
+    <string name="str_network_state_update">Обновить</string>
+    <string name="str_cancel_low">Отменить</string>
+
+    <string name="str_time_of_filing">Время подачи</string>
+    <string name="str_choose_time_info">Для выхода предоставляется 5 минут бесплатного ожидания</string>
+    <string name="str_skip">Пропустить</string>
+    <string name="str_attach_card">Прикрепить карту</string>
+    <string name="str_comments"><u>Комментарий</u></string>
+    <string name="str_are_you_sure">Вы уверены что хотите отменить заказ?</string>
+    <string name="str_are_you_sure_unset">Сбросить все изменения и вернуться на главный экран?</string>
+
+    <string name="str_driver_time_calc">Идёт расчет времени прибытия водителя</string>
+    <string name="str_sms_notification">SMS оповещения</string>
+    <string name="str_yes">Да</string>
+    <string name="str_no">Нет</string>
+    <string name="alert_order_delete">Вы действительно хотите удалить поездку?</string>
+    <string name="alert_favorite_address_delete"> Вы действительно хотите удалить любимый адрес?</string>
+    <string name="alert_last_address_delete"> Вы действительно хотите удалить адрес?</string>
+    <string name="str_color">Цвет</string>
+    <string name="str_machine_brand">Марка машины</string>
+
+    <string name="str_driver_near_title">Водитель рядом</string>
+    <string name="str_driver_near_sut_title">
+        <![CDATA[<p>Скоро сообщит<br/> о готовности ехать</p>]]>
+    </string>
+    <string name="str_my_addresses"><u>Мои адреса</u></string>
+    <string name="str_entrance_hint">подъезд</string>
+    <string name="str_comment">Комментарии</string>
+    <string name="str_second_short">сек.</string>
+
+    <string name="str_say_to_driver">Скажу водителю</string>
+    <string name="str_now">Сейчас</string>
+    <string name="str_date">Время</string>
+    <string name="str_tariff">Тариф</string>
+    <string name="str_wishes">Пожелания</string>
+    <string name="str_child_seat">Детское сиденье</string>
+    <string name="alert_card_number">Неправильно набран номер карты</string>
+    <string name="alert_credit_card_date">Вы ввели неправильную дату</string>
+    <string name="alert_credit_card_name">Поле имени не должно быть пустым</string>
+    <string name="alert_credit_card_cvv">Введите 3-значный код проверки, указанный на обратной стороне карты</string>
+    <string name="str_sale">скидка</string>
+    <string name="str_airports">Аэропорты</string>
+    <string name="str_search">Поиск</string>
+    <string name="str_stations">Вокзалы</string>
+
+    <string name="str_add">Добавить</string>
+    <string name="str_send_to_friend">ОТРПАВИТЬ ДРУГУ</string>
+    <string name="str_send_to">Отправить по</string>
+    <string name="str_referral_share_text">Хочешь прокатиться на такси LocService со скидкой? Лови мой код</string>
+    <string name="str_post_by">Сделать пост по</string>
+    <string name="str_vk_share_text">Хочешь прокатиться на такси LocService? Скачай приложение по этой ссылке</string>
+
+    <string name="str_about_logo_info">LocService - сервис заказа такси \nчерез мобильное приложение, \nвеб-сайт или оператора.</string>
+    <string name="str_about_link"><u>LINK</u></string>
+    <string name="str_version">Версия</string>
+    <string name="str_lebedev_text">Дизайн - <a href="http://www.artlebedev.ru/">Студия Артемия Лебедева</a></string>
+    <string name="str_send_email">Отправить сообщение</string>
+    <string name="str_phone_register_hint">7XXX XXX-XX-XX</string>
+    <string name="alert_large_text">Приложение LocService может некорректно отображать тексты с большим шрифтом</string>
+    <string name="str_email_long">Электронная почта</string>
+
+</resources>

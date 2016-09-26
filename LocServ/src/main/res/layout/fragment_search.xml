@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff"
+    android:paddingTop="@dimen/search_fragment_top_padding">
+
+    <!-- TOP BAR LAYOUT -->
+    <LinearLayout
+        android:id="@+id/layoutTopBarItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        
+        <ImageView 
+            android:id="@+id/imageViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back_orange"
+            android:contentDescription="@null"
+            />
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1">
+            
+			<com.locservice.ui.controls.CustomEditTextView
+	                android:id="@+id/editTextViewSearch"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textColor="#000000"
+	                android:background="#00000000"
+	                android:cursorVisible="true"
+	                android:textCursorDrawable="@drawable/search_edit_text_cursor"
+	                android:singleLine="true"
+	                android:paddingLeft="10dp"
+	                android:textColorHint="#999999"
+	                android:hint="@string/str_search"
+	                android:layout_gravity="center_horizontal"
+	                android:textSize="18sp"
+	                locservice:font="fonts/RobotoRegular.ttf" />
+            
+       	<!-- divider line -->
+       	<View
+            android:id="@+id/dividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="5dp"
+            android:background="#f05b3b" />
+            
+        </LinearLayout>
+        
+        <ImageView 
+            android:id="@+id/imageViewClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:background="@drawable/ic_close_orange"/>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTopBarItems">
+
+        <!-- SEARCH RECYCLER VIEW  -->
+        <ExpandableListView
+            android:id="@+id/recyclerViewSearchAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingTop="16dp"
+            android:fitsSystemWindows="true"
+            android:overScrollMode="never"
+            android:groupIndicator="@null"
+            android:divider="@null"/>
+
+        <!-- FIRST SCREEN LAYOUT -->
+        <LinearLayout
+            android:id="@+id/layoutFirstScreen"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutFavorites"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/drawable_white_selector"
+                 android:gravity="center_vertical"
+                 android:paddingTop="16dp"
+                 android:paddingRight="16dp"
+                 android:paddingBottom="16dp"
+                 android:paddingLeft="25dp"
+                 android:orientation="horizontal">
+
+             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_heart"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"/>
+
+             <com.locservice.ui.controls.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="#00000000"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/str_favorites"
+                        android:textSize="18sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+        </LinearLayout>
+         <LinearLayout
+                 android:id="@+id/layoutLatest"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/drawable_white_selector"
+                 android:gravity="center_vertical"
+                 android:visibility="visible"
+                 android:paddingTop="16dp"
+                 android:paddingRight="16dp"
+                 android:paddingBottom="16dp"
+                 android:paddingLeft="25dp"
+                 android:orientation="horizontal">
+
+             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_time"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"/>
+
+             <com.locservice.ui.controls.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="#00000000"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/str_latest"
+                        android:textSize="18sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+        </LinearLayout>
+        <LinearLayout
+                 android:id="@+id/layoutAirports"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/drawable_white_selector"
+                 android:gravity="center_vertical"
+                 android:paddingTop="16dp"
+                 android:paddingRight="16dp"
+                 android:paddingBottom="16dp"
+                 android:paddingLeft="25dp"
+                 android:orientation="horizontal">
+
+             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_airport"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"/>
+
+             <com.locservice.ui.controls.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="#00000000"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/str_airports"
+                        android:textSize="18sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                 android:id="@+id/layoutStations"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/drawable_white_selector"
+                 android:gravity="center_vertical"
+                 android:paddingTop="16dp"
+                 android:paddingRight="16dp"
+                 android:paddingBottom="16dp"
+                 android:paddingLeft="25dp"
+                 android:orientation="horizontal">
+
+             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_station"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"/>
+
+             <com.locservice.ui.controls.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="#00000000"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/str_stations"
+                        android:textSize="18sp"
+                        locservice:font="fonts/RobotoRegular.ttf" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewNoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/str_no_result"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    </ProgressBar>
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewMyAddresses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:text="@string/str_my_addresses"/>
+
+</RelativeLayout>

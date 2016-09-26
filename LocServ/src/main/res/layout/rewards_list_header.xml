@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBase"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewHeaderTopRewardsSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="72sp"
+            locservice:font="fonts/RobotoLight.ttf" />
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewRewardsSizeRuble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:gravity="center_horizontal"
+            android:text="@string/str_ruble"
+            android:textColor="@color/white"
+            android:textSize="72sp"
+            locservice:font="fonts/RobotoLight.ttf" />
+
+    </LinearLayout>
+
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewRewardsAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/str_rewards_account"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <com.locservice.ui.controls.CustomEditTextView
+        android:id="@+id/editTextSetPromoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rewadrs_button_background"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:singleLine="true"
+        android:hint="@string/str_set_promo_code"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        locservice:font="fonts/RobotoMedium.ttf" />
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewEarnRewards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:gravity="center_horizontal"
+        android:text="@string/str_earn_rewards"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="visible"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewHeaderRewardsSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#EF5B3C"
+            android:textSize="56sp"
+            locservice:font="fonts/RobotoLight.ttf" />
+        <com.locservice.ui.controls.CustomTextView
+            android:id="@+id/textViewHeaderRewardsSizeRuble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_ruble"
+            android:textColor="#EF5B3C"
+            android:layout_marginLeft="4dp"
+            android:textSize="56sp"
+            locservice:font="fonts/RobotoLight.ttf" />
+
+    </LinearLayout>
+
+    <com.locservice.ui.controls.CustomTextView
+        android:id="@+id/textViewHeaderRewardsInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:text="@string/str_for_first_friend_trip"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        locservice:font="fonts/RobotoRegular.ttf" />
+
+</LinearLayout>

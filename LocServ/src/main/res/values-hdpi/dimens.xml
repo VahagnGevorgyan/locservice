@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<dimen name="header_text_margin_side">10dp</dimen>
+	<dimen name="common_list_margin_side">10dp</dimen>
+
+	<dimen name="dimen_top_bar_subtitle_text_size">20sp</dimen>
+	    
+</resources>

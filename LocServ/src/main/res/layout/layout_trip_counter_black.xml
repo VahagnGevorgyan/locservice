@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+  			  xmlns:locservice="http://schemas.android.com/apk/res-auto"
+  	    	  android:layout_height="match_parent"
+         	  android:layout_width="match_parent"
+          	  android:orientation="horizontal"
+         	  android:visibility="gone"
+       		  android:gravity="center_horizontal"
+       		  >
+   		<!-- counter number -->
+      	<LinearLayout android:id="@+id/counter"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  android:orientation="horizontal"
+		  >
+			<!--&lt;!&ndash; 5 &ndash;&gt;-->
+			<!--<include android:id="@+id/layoutDigit5"-->
+				<!--layout="@layout/counter_digit_other_black"-->
+				<!--android:layout_width="wrap_content"-->
+				<!--android:layout_height="wrap_content"/>-->
+			<!--&lt;!&ndash; 4 &ndash;&gt;-->
+			<!--<include android:id="@+id/layoutDigit4"-->
+				<!--layout="@layout/counter_digit_other_black"-->
+				<!--android:layout_width="wrap_content"-->
+				<!--android:layout_height="wrap_content"/>-->
+			<!--&lt;!&ndash; 3 &ndash;&gt;-->
+			<!--<include android:id="@+id/layoutDigit3" -->
+			    	 <!--layout="@layout/counter_digit_other_black" -->
+			    	 <!--android:layout_width="wrap_content"-->
+					 <!--android:layout_height="wrap_content"/>-->
+			<!--&lt;!&ndash; 2 &ndash;&gt;-->
+			<!--<include android:id="@+id/layoutDigit2" -->
+			    	 <!--layout="@layout/counter_digit_other_black"-->
+			    	 <!--android:layout_width="wrap_content"-->
+		 			 <!--android:layout_height="wrap_content"/>-->
+			<!--&lt;!&ndash; 1 &ndash;&gt;-->
+			<!--<include android:id="@+id/layoutDigit1" -->
+			    	 <!--layout="@layout/counter_digit_black" -->
+			    	 <!--android:layout_width="wrap_content"-->
+		 			 <!--android:layout_height="wrap_content"/>-->
+			<com.locservice.ui.controls.CustomTextView
+				android:id="@+id/textViewCounterBack"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="0"
+				android:textColor="@color/black"
+				android:textSize="50sp"
+				android:visibility="visible"
+				locservice:font="fonts/RobotoLight.ttf" />
+		</LinearLayout>
+		<!-- ruble & expand arrow -->
+		<com.locservice.ui.controls.CustomTextView
+              android:id="@+id/textViewCounterRuble"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="@string/str_ruble"
+              android:textColor="@color/black"
+              android:textSize="50sp"
+              locservice:font="fonts/RobotoLight.ttf"
+              />
+          <ImageView
+              	android:id="@+id/imageViewArrow"
+             	android:layout_width="20dp"
+			    android:layout_height="20dp"
+			    android:layout_gravity="center_vertical"
+			    android:contentDescription="@null"
+			    android:src="@drawable/ic_arrow_down_black" />
+</LinearLayout>
+			 

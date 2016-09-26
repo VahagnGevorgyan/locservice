@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:locservice="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bg"
+    android:orientation="vertical"
+    tools:context="com.locservice.ui.AboutActivity">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="@dimen/header_top_padding">
+
+            <LinearLayout
+                android:id="@+id/layoutBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_arrow_back_white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/container_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:orientation="vertical">
+
+            <!-- Logo Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical">
+                <!-- Logo -->
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/logo_about"
+                    android:contentDescription="@null" />
+                <!-- Logo Information -->
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewLogoInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/str_about_logo_info"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    locservice:font="fonts/RobotoMedium.ttf" />
+                <com.locservice.ui.controls.CustomTextView
+                    android:id="@+id/textViewLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/str_about_link"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    locservice:font="fonts/RobotoRegular.ttf" />
+            </LinearLayout>
+
+            <!-- Review Layout-->
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/rewadrs_button_background"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingTop="10dp"
+                tools:text="@string/str_set_review"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                locservice:font="fonts/RobotoMedium.ttf" />
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewReviewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textColor="@color/grey_info"
+                android:text="@string/str_set_review_text"
+                android:textSize="18sp"
+                locservice:font="fonts/RobotoRegular.ttf"
+                />
+            <!-- Version -->
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewVersionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textColor="@color/grey_info"
+                android:textSize="18sp"
+                locservice:font="fonts/RobotoRegular.ttf"
+                />
+            <!-- Lebedev Logo -->
+            <ImageView
+                android:id="@+id/imageViewLebedevLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/lebedev_logo"
+                android:contentDescription="@null" />
+            <com.locservice.ui.controls.CustomTextView
+                android:id="@+id/textViewLebedevText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textColor="@color/grey_info"
+                android:textSize="18sp"
+                android:text="@string/str_lebedev_text"
+                locservice:font="fonts/RobotoRegular.ttf"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
