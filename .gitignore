@@ -1,0 +1,15 @@
+*.iml
+.gradle
+local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/.DS_Store
+/build
+/captures
+/LocServ/build
+/yandexmapkitlibrary/build
+/.idea
+/.gradle
+/*.iml
+/LocServ/*.iml
+/local.properties
